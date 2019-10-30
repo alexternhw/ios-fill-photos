@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RGE-UB-gSp">
+                                <rect key="frame" x="148" y="433" width="118" height="30"/>
+                                <state key="normal" title="Add 1000 photos"/>
+                                <connections>
+                                    <action selector="onAddPhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RVW-In-WOX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Db-C7-72e">
+                                <rect key="frame" x="129.5" y="473" width="155" height="30"/>
+                                <state key="normal" title="Remove added Photos"/>
+                                <connections>
+                                    <action selector="removePhotos:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EHv-QU-ME7"/>
+                                </connections>
+                            </button>
+                            <progressView hidden="YES" opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="AMO-2g-SA8">
+                                <rect key="frame" x="30" y="401" width="354" height="2"/>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LhU-fG-iee">
+                                <rect key="frame" x="10" y="64" width="394" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="RGE-UB-gSp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2p0-Er-bNv"/>
+                            <constraint firstItem="7Db-C7-72e" firstAttribute="top" secondItem="RGE-UB-gSp" secondAttribute="bottom" constant="10" id="5is-jO-tl9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="LhU-fG-iee" secondAttribute="trailing" constant="10" id="9Ga-QD-oEZ"/>
+                            <constraint firstItem="AMO-2g-SA8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="Apk-MP-E8G"/>
+                            <constraint firstItem="RGE-UB-gSp" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="C3S-q5-Fzp"/>
+                            <constraint firstItem="RGE-UB-gSp" firstAttribute="top" secondItem="AMO-2g-SA8" secondAttribute="bottom" constant="30" id="JUx-44-Vdu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="AMO-2g-SA8" secondAttribute="trailing" constant="10" id="Kgg-01-VtS"/>
+                            <constraint firstItem="7Db-C7-72e" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="i4C-di-tEP"/>
+                            <constraint firstItem="LhU-fG-iee" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="l6g-xZ-hQu"/>
+                            <constraint firstItem="LhU-fG-iee" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="mcQ-hB-M6S"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="addButton" destination="RGE-UB-gSp" id="MgB-Sm-kxK"/>
+                        <outlet property="photoCount" destination="LhU-fG-iee" id="LY2-7s-3yp"/>
+                        <outlet property="progressView" destination="AMO-2g-SA8" id="cHZ-ig-bQ5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="132" y="138"/>
+        </scene>
+    </scenes>
+</document>
